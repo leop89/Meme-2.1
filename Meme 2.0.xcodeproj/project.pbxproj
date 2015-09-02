@@ -87,14 +87,14 @@
 		B3B90CFC1B9484A20047016B /* Meme 2.0 */ = {
 			isa = PBXGroup;
 			children = (
-				B3B90CFF1B9484A20047016B /* AppDelegate.swift */,
 				B3B90D031B9484A20047016B /* Main.storyboard */,
-				B3B90D1F1B9485920047016B /* MemeEditorVC.swift */,
 				B3B90D211B9485F50047016B /* Meme.swift */,
+				B3B90D1F1B9485920047016B /* MemeEditorVC.swift */,
 				B3B90D231B94864B0047016B /* SentMemesTVC.swift */,
 				B3B90D251B94867E0047016B /* SentMemesCVC.swift */,
 				B3B90D271B9486C70047016B /* MemeDetailVC.swift */,
 				B3B90D291B9486EF0047016B /* MemeCVCell.swift */,
+				B3B90CFF1B9484A20047016B /* AppDelegate.swift */,
 				B3B90D061B9484A20047016B /* Images.xcassets */,
 				B3B90D081B9484A20047016B /* LaunchScreen.xib */,
 				B3B90CFD1B9484A20047016B /* Supporting Files */,
@@ -429,6 +429,7 @@
 				B3B90D1B1B9484A20047016B /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		B3B90D1C1B9484A20047016B /* Build configuration list for PBXNativeTarget "Meme 2.0Tests" */ = {
 			isa = XCConfigurationList;
@@ -437,6 +438,7 @@
 				B3B90D1E1B9484A20047016B /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

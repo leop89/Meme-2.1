@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="7706" systemVersion="14F27" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="7706" systemVersion="14F27" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="NIZ-6s-bxu">
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="7703"/>
         <capability name="Alignment constraints with different attributes" minToolsVersion="5.1"/>
@@ -40,10 +40,10 @@
             </objects>
             <point key="canvasLocation" x="-1257" y="904"/>
         </scene>
-        <!--Sent Memes Table View Controller-->
+        <!--Sent MemesTVC-->
         <scene sceneID="gtE-di-35W">
             <objects>
-                <tableViewController id="G1x-tf-VkE" customClass="SentMemesTableViewController" customModule="imagePickExperiment" customModuleProvider="target" sceneMemberID="viewController">
+                <tableViewController id="G1x-tf-VkE" customClass="SentMemesTVC" customModule="Meme_2_0" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="50" sectionHeaderHeight="22" sectionFooterHeight="22" id="xx4-ef-nrB">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -117,10 +117,10 @@
             </objects>
             <point key="canvasLocation" x="-2157" y="156"/>
         </scene>
-        <!--Sent Memes Collection View Controller-->
+        <!--Sent MemesCVC-->
         <scene sceneID="JeW-S0-0Q1">
             <objects>
-                <collectionViewController id="9aD-gi-VN0" customClass="SentMemesCollectionViewController" customModule="imagePickExperiment" customModuleProvider="target" sceneMemberID="viewController">
+                <collectionViewController id="9aD-gi-VN0" customClass="SentMemesCVC" customModule="Meme_2_0" customModuleProvider="target" sceneMemberID="viewController">
                     <collectionView key="view" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" id="fMN-pr-jSL">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -132,7 +132,7 @@
                             <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
                         </collectionViewFlowLayout>
                         <cells>
-                            <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="MemeCollectionViewCell" id="bTT-cs-G8a" customClass="MemeCollectionViewCell" customModule="imagePickExperiment" customModuleProvider="target">
+                            <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="MemeCollectionViewCell" id="bTT-cs-G8a" customClass="MemeCVCell" customModule="Meme_2_0" customModuleProvider="target">
                                 <autoresizingMask key="autoresizingMask"/>
                                 <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
                                     <rect key="frame" x="0.0" y="0.0" width="188" height="162"/>
@@ -185,10 +185,10 @@
             </objects>
             <point key="canvasLocation" x="-372" y="-90"/>
         </scene>
-        <!--View Controller-->
+        <!--Meme EditorVC-->
         <scene sceneID="dXI-vo-TCS">
             <objects>
-                <viewController id="MzA-RQ-WxM" customClass="ViewController" customModule="imagePickExperiment" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="MzA-RQ-WxM" customClass="MemeEditorVC" customModule="Meme_2_0" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="S1h-DX-G0a"/>
                         <viewControllerLayoutGuide type="bottom" id="9GX-rD-azM"/>
@@ -215,9 +215,6 @@
                                     <barButtonItem width="42" style="plain" systemItem="fixedSpace" id="1bG-kx-Rn6"/>
                                 </items>
                             </toolbar>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="fHg-IU-fr8">
-                                <rect key="frame" x="0.0" y="0.0" width="240" height="128"/>
-                            </imageView>
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" clearsOnBeginEditing="YES" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="4Cl-1r-Ei4">
                                 <rect key="frame" x="0.0" y="-30" width="97" height="30"/>
                                 <constraints>
@@ -275,6 +272,9 @@
                                     </mask>
                                 </variation>
                             </textField>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="fHg-IU-fr8">
+                                <rect key="frame" x="0.0" y="0.0" width="240" height="128"/>
+                            </imageView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <constraints>
@@ -306,55 +306,55 @@
                         <variation key="default">
                             <mask key="subviews">
                                 <exclude reference="pl9-eB-9eY"/>
-                                <exclude reference="fHg-IU-fr8"/>
                                 <exclude reference="4Cl-1r-Ei4"/>
                                 <exclude reference="V6Y-PG-DLv"/>
                                 <exclude reference="U4k-uF-fy5"/>
+                                <exclude reference="fHg-IU-fr8"/>
                             </mask>
                             <mask key="constraints">
                                 <exclude reference="4UG-d4-XSw"/>
-                                <exclude reference="1o5-WG-48V"/>
-                                <exclude reference="1ai-xF-HZt"/>
-                                <exclude reference="uvV-Sz-7lx"/>
                                 <exclude reference="0fz-LH-EZJ"/>
+                                <exclude reference="1ai-xF-HZt"/>
+                                <exclude reference="1o5-WG-48V"/>
                                 <exclude reference="DjZ-uS-DHt"/>
+                                <exclude reference="uvV-Sz-7lx"/>
                                 <exclude reference="3XQ-xb-leQ"/>
                                 <exclude reference="eba-jk-Ge6"/>
-                                <exclude reference="qeg-yR-OXD"/>
                                 <exclude reference="cbi-Pk-Z2V"/>
+                                <exclude reference="qeg-yR-OXD"/>
                                 <exclude reference="uQQ-8Q-akX"/>
-                                <exclude reference="ysX-i0-vJW"/>
                                 <exclude reference="7Tw-Lr-xzj"/>
-                                <exclude reference="Uqd-os-4yR"/>
                                 <exclude reference="H7k-9x-jBT"/>
+                                <exclude reference="Uqd-os-4yR"/>
                                 <exclude reference="qOz-Pg-k2h"/>
+                                <exclude reference="ysX-i0-vJW"/>
                             </mask>
                         </variation>
                         <variation key="widthClass=compact">
                             <mask key="subviews">
                                 <include reference="pl9-eB-9eY"/>
-                                <include reference="fHg-IU-fr8"/>
                                 <include reference="4Cl-1r-Ei4"/>
                                 <include reference="V6Y-PG-DLv"/>
                                 <include reference="U4k-uF-fy5"/>
+                                <include reference="fHg-IU-fr8"/>
                             </mask>
                             <mask key="constraints">
                                 <include reference="4UG-d4-XSw"/>
-                                <include reference="1o5-WG-48V"/>
-                                <include reference="1ai-xF-HZt"/>
-                                <include reference="uvV-Sz-7lx"/>
                                 <include reference="0fz-LH-EZJ"/>
+                                <include reference="1ai-xF-HZt"/>
+                                <include reference="1o5-WG-48V"/>
                                 <include reference="DjZ-uS-DHt"/>
+                                <include reference="uvV-Sz-7lx"/>
                                 <include reference="3XQ-xb-leQ"/>
                                 <include reference="eba-jk-Ge6"/>
-                                <include reference="qeg-yR-OXD"/>
                                 <include reference="cbi-Pk-Z2V"/>
+                                <include reference="qeg-yR-OXD"/>
                                 <include reference="uQQ-8Q-akX"/>
-                                <include reference="ysX-i0-vJW"/>
                                 <include reference="7Tw-Lr-xzj"/>
-                                <include reference="Uqd-os-4yR"/>
                                 <include reference="H7k-9x-jBT"/>
+                                <include reference="Uqd-os-4yR"/>
                                 <include reference="qOz-Pg-k2h"/>
+                                <include reference="ysX-i0-vJW"/>
                             </mask>
                         </variation>
                     </view>
@@ -374,10 +374,10 @@
             </objects>
             <point key="canvasLocation" x="719" y="-402"/>
         </scene>
-        <!--Meme Detail View Controller-->
+        <!--Meme DetailVC-->
         <scene sceneID="rGD-gJ-ooW">
             <objects>
-                <viewController id="MF5-rn-1eC" customClass="MemeDetailViewController" customModule="imagePickExperiment" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="MF5-rn-1eC" customClass="MemeDetailVC" customModule="Meme_2_0" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="PU9-ZV-kJt"/>
                         <viewControllerLayoutGuide type="bottom" id="6hr-D6-9gY"/>
@@ -406,7 +406,7 @@
                         </variation>
                     </view>
                     <connections>
-                        <outlet property="detailView" destination="rL8-My-t0f" id="HY3-hl-l55"/>
+                        <outlet property="detailView" destination="rL8-My-t0f" id="ukb-m8-Dr7"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="sli-BA-sLQ" userLabel="First Responder" sceneMemberID="firstResponder"/>
