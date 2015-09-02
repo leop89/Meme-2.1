@@ -14,11 +14,11 @@ class MemeDetailVC: UIViewController {
     
     var memes : Meme!
     
+    
     override func viewWillAppear(animated: Bool) {
         
         
-        self.detailView.image! = memes.memedImage
-        
+        self.detailView.image = memes.memedImage
         
         
     }

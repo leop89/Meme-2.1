@@ -11,6 +11,8 @@ import UIKit
 class SentMemesCVC: UICollectionViewController , UICollectionViewDataSource {
     
     var memes : [Meme]!
+    
+    
     let reuseIdentifier = "MemeCollectionViewCell"
     
     @IBOutlet weak var flowLayout : UICollectionViewFlowLayout!
@@ -18,7 +20,8 @@ class SentMemesCVC: UICollectionViewController , UICollectionViewDataSource {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        //        self.collectionView!.registerClass(UICollectionViewCell.self, forCellWithReuseIdentifier: reuseIdentifier)
+//        self.collectionView!.registerClass(UICollectionViewCell.self, forCellWithReuseIdentifier: reuseIdentifier)
+        
         let object = UIApplication.sharedApplication().delegate
         let appDelegate = object as! AppDelegate
         memes = appDelegate.memes
@@ -64,7 +67,7 @@ class SentMemesCVC: UICollectionViewController , UICollectionViewDataSource {
     
     override func collectionView(collectionView: UICollectionView, cellForItemAtIndexPath indexPath: NSIndexPath) -> UICollectionViewCell {
         
-        let cell = collectionView.dequeueReusableCellWithReuseIdentifier(reuseIdentifier, forIndexPath: indexPath) as! UICollectionViewCell
+        let cell = collectionView.dequeueReusableCellWithReuseIdentifier(reuseIdentifier, forIndexPath: indexPath) as! MemeCVCell
         
         let meme = memes[indexPath.item]
         let imageView =  UIImageView(image: meme.imageView)
@@ -74,9 +77,9 @@ class SentMemesCVC: UICollectionViewController , UICollectionViewDataSource {
         
     }
     
-    override func collectionView(collectionView: UICollectionView, didDeselectItemAtIndexPath indexPath: NSIndexPath) {
+    override func collectionView(collectionView: UICollectionView, didSelectItemAtIndexPath indexPath: NSIndexPath) {
         
-        let detailController = self.storyboard!.instantiateViewControllerWithIdentifier("MemeDetailViewController") as? MemeDetailVC
+        let detailController = self.storyboard!.instantiateViewControllerWithIdentifier("MemeDetailVC") as? MemeDetailVC
         detailController!.memes = self.memes[indexPath.row] as Meme
         self.navigationController!.pushViewController(detailController!, animated: true)
         
